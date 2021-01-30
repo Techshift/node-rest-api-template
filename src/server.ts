@@ -1,7 +1,7 @@
 import { app } from './config/app';
-
-const PORT = 3000;
+import { logger } from './config/logger';
+import { PORT } from './config/env';
 
 app.listen(PORT, () => {
-	console.log('Express server listening on port ' + PORT);
+	logger.info('Server listening on port ' + PORT);
 });

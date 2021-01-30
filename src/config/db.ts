@@ -1,8 +1,9 @@
 import * as mongodb from 'mongodb';
+import { logger } from './logger';
+import { MONGO_URL } from './env';
 
 const dbName = 'authentication';
-const url = process.env.MONGODB_URL;
-const connection = `${url}/${dbName}`;
+const connection = `${MONGO_URL}/${dbName}?retryWrites=false`;
 
 const client = new mongodb.MongoClient(connection, {
 	useUnifiedTopology: true,
@@ -10,7 +11,9 @@ const client = new mongodb.MongoClient(connection, {
 });
 
 function open(): Promise<void> {
-	return client.connect().then();
+	return client.connect().then(() => {
+		logger.info('MongoDB Connected');
+	});
 }
 
 async function close(): Promise<void> {
