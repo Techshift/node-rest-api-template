@@ -20,8 +20,8 @@ async function close(): Promise<void> {
 	return client.close();
 }
 
-function db(): mongodb.Db {
+function mongoDb(): mongodb.Db {
 	return client.db(dbName);
 }
 
-export { open, close, db };
+export { open, close, mongoDb };
