@@ -1,0 +1,27 @@
+
+# Node
+node_modules
+
+# Docker
+.dockerignore
+docker
+docker-compose.yml
+Dockerfile
+Dockerfile-old
+
+# Git
+.git
+.gitignore
+.gitmodules
+
+# Docs
+docs
+README.md
+CHANGELOG.md
+
+# IDE
+.idea
+.vscode
+
+
+

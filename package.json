@@ -7,9 +7,10 @@
 		"start": "node -r dotenv/config ./dist/server.js",
 		"serve": "npx concurrently --kill-others --names \"tsc,node\" -c \"blue,green\" \"tsc --noEmit --pretty --watch\" \"npx nodemon src/server.ts --exec babel-node --extensions .ts -r dotenv/config src/server.ts\"",
 		"clean": "rm -r dist",
-		"build": "tsc --noEmit && babel src --out-dir dist --extensions .ts",
+		"build": "babel src --out-dir dist --extensions .ts",
 		"eslint": "eslint -c .eslintrc.js --ext .ts src/ --fix",
-		"prettier": "prettier --write ."
+		"prettier": "prettier --write .",
+		"typescript": "tsc --noEmit"
 	},
 	"author": "",
 	"license": "ISC",
