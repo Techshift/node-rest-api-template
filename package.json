@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "node -r dotenv/config ./dist/server.js",
 		"serve": "npx concurrently --kill-others --names \"tsc,node\" -c \"blue,green\" \"tsc --noEmit --pretty --watch\" \"npx nodemon src/server.ts --exec babel-node --extensions .ts -r dotenv/config src/server.ts\"",
+		"test": "jest src/",
 		"clean": "rm -r dist",
 		"build": "babel src --out-dir dist --extensions .ts",
 		"eslint": "eslint -c .eslintrc.js --ext .ts src/ --fix",
@@ -36,6 +37,7 @@
 		"babel-jest": "^26.6.3",
 		"eslint": "^7.18.0",
 		"eslint-config-prettier": "^7.2.0",
+		"jest": "^26.6.3",
 		"prettier": "^2.2.1",
 		"typescript": "^4.1.3"
 	}

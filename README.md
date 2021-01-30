@@ -50,3 +50,4 @@ docker run -p 3000:3000 techshiftltd/node-rest-api-template:latest
 - [ ] gRPC
 - [ ] Swagger
 - [ ] CHANGELOG
+- [ ] Security Analysis
