@@ -1,4 +1,29 @@
-node-rest-api-template
+Node REST API Template
+
+## Installation
+
+```
+npm install
+```
+
+Create a .env file at the project and fill the following:
+```
+PORT=number
+MONGO_URL=string (required)
+```
+
+## Run
+
+To run a development server
+```
+npm run serve
+```
+
+To run a production server
+```
+npm run build
+npm start
+```
 
 Todo
 
@@ -6,7 +31,7 @@ Todo
 - [x] Logger
 - [x] Eslint
 - [x] Prettier
-- [x] MongoDB
+- [ ] MongoDB
 - [ ] Docker
 - [ ] Jest tests
 - [ ] Jest e2e tests
