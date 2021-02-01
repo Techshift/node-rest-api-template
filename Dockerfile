@@ -1,5 +1,5 @@
 # ----- Base ------
-FROM node:10.15.3-slim AS base
+FROM node:10.15.3-alpine AS base
 
 WORKDIR /usr/app
 COPY package*.json ./

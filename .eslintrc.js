@@ -9,8 +9,9 @@ module.exports = {
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
 		'prettier',
-		'prettier/@typescript-eslint'
+		'prettier/@typescript-eslint',
+		'plugin:security/recommended'
 	],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint']
+	plugins: ['@typescript-eslint', 'security']
 };

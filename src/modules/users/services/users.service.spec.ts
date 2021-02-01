@@ -19,6 +19,29 @@ describe('getUser', () => {
 	});
 });
 
+describe('getUsers', () => {
+	it('Should return the users', async () => {
+		// -- Arrange -- //
+
+		// -- Act -- //
+		const result = await usersService.getUsers({});
+
+		// -- Assert -- //
+		expect(result).toEqual({
+			items: [
+				{
+					_id: expect.anything(),
+					name: expect.any(String)
+				}
+			],
+			skip: 0,
+			limit: 10,
+			total: 1,
+			hasMore: false
+		});
+	});
+});
+
 describe('createUser', () => {
 	it('Should return the newly created user', async () => {
 		// -- Arrange -- //
