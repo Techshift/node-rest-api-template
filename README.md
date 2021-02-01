@@ -6,7 +6,7 @@
 npm install
 ```
 
-Create a .env file at the project and fill the following:
+Create a .env file at the project root and fill the following:
 
 ```
 PORT=number
@@ -32,7 +32,7 @@ With docker
 
 ```
 docker build --tag techshiftltd/node-rest-api-template:latest .
-docker run -p 3000:3000 techshiftltd/node-rest-api-template:latest
+docker run -p 3000:3000 --env-file ./.env techshiftltd/node-rest-api-template:latest
 ```
 
 ## Todo
